@@ -182,7 +182,7 @@ python main.py "Add 10 and multiply by 2 and multiply by 4 and then divide by 2 
 python main.py "What is 31 plus 5?"
 # → 36.0
 
- python main.py "Add 10 to the individual temperature in Paris and London right now."
+python main.py "Add 10 to the individual temperature in Paris and London right now."
 # → {'London': '27.0°C', 'Paris': '28.0°C'}              # Added 10 to cities individually
 
 python main.py "Weather in Paris and London?"
