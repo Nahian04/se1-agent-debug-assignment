@@ -4,6 +4,7 @@ TEMPERATURE_TOOL = "temperature"
 WEATHER_TOOL = "weather"
 CALC_TOOL = "calc"
 KB_TOOL = "kb"
+FX_TOOL = "fx"
 
 # Default word-to-symbol mapping for arithmetic operations
 WORD_OPS: Dict[str, str] = {
@@ -13,8 +14,15 @@ WORD_OPS: Dict[str, str] = {
     "divide": "/", "divided": "/"
 }
 
+# List of valid currencies
+VALID_CURRENCIES: List[str] = ["USD", "EUR", "GBP", "JPY", "AUD", "CAD"]
+
 DEFAULT_CITY = "dhaka"
 SUPPORTED_CITIES = {"paris", "london", "dhaka"}
+
+FX_RATES: Dict[str, float] = {
+    "usd_to_eur": 0.91
+}
 
 # Predefined temperatures for cities
 CITY_TEMPS: dict[str, float] = {

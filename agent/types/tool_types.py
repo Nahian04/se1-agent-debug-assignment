@@ -6,6 +6,11 @@ class CalcArgs(BaseModel):
     operation: Optional[str] = None
     expr: Optional[str] = None
 
+class FXArgs(BaseModel):
+    amount: Optional[float] = None
+    from_currency: str = None
+    to_currency: str = None
+
 class TempArgs(BaseModel):
     cities: List[str]
     operation: str = "single"
@@ -15,7 +20,7 @@ class WeatherArgs(BaseModel):
 
 class KBArgs(BaseModel):
     q: str = None
-
+    
 class KBEntry(BaseModel):
     name: str
     summary: str

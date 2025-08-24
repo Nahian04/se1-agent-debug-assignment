@@ -1,3 +1,5 @@
+from constants.miscellaneous_constants import VALID_CURRENCIES
+
 # Binary expressions (words or symbols)
 BINARY_PATTERN = r"([\d\.]+[a-zA-Z]*)\s*(add|plus|sum|subtract|minus|multiply|times|divide|divided|[\+\-\*/])\s*([\d\.]+[a-zA-Z]*)"
 
@@ -6,6 +8,9 @@ PERCENT_PATTERN = r"([\d\.]+[a-zA-Z]*)\s*%\s*of\s*([\d\.a-zA-Z]+)"
 
 # Imperative expressions
 IMPERATIVE_PATTERN = r"\b(add|plus|sum|subtract|minus|multiply|times|divide|divided)\b\s*(?:by\s*)?([\d\.]+[a-zA-Z]*)"
+
+# Regex pattern to match currency conversion phrases
+CURRENCY_OP_PATTERN = rf"(average|avg|total|sum|maximum|minimum|max|min)?\s*(?:of)?\s*([\d\.,\sand]+)\s*({'|'.join(VALID_CURRENCIES)})\s*(?:into|to)\s*({'|'.join(VALID_CURRENCIES)})"
 
 # Regex to detect temperature queries
 TEMPERATURE_PATTERN = r"(average|avg|total|sum|maximum|minimum|max|min)?\s*(?:of|the|for)?\s*temperature (?:in|at) (.+?)(?: right now|\?|$)"

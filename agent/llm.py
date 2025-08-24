@@ -1,5 +1,6 @@
 from typing import List
 from pydantic import ValidationError
+from constants.miscellaneous_constants import FX_TOOL
 from constants.tool_constants import PARSERS, TOOL_MODELS
 from .types.plan_types import PlanStepModel
 from utils.logger import get_logger
@@ -56,7 +57,11 @@ def call_llm(prompt: str) -> List[PlanStepModel]:
                     logger.error("ValidationError: %s", e)
                 
             if result:
-                tools.extend(result)
+                # Currency parser replaces tools
+                if name == FX_TOOL:
+                    tools = result
+                else:
+                    tools.extend(result)
 
             logger.info("Parsed %s tools: %s", name, result)
         except Exception:
