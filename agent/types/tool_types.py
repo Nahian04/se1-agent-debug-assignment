@@ -10,4 +10,7 @@ class TempArgs(BaseModel):
     cities: List[str]
     operation: str = "single"
 
+class WeatherArgs(BaseModel):
+    cities: List[str]
+
 IntermediateValues = Dict[str, Union[str, float, Dict]]

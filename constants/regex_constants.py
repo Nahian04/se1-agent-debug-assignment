@@ -16,6 +16,9 @@ CITY_CLEAN_PATTERN = r"[^\w\s]"
 # Regex to split words/cities
 CITY_SPLIT_PATTERN = r"[ ,?]+| and "
 
+# Regex to detect weather queries
+WEATHER_PATTERN = r"weather(?: in| of)? (.+?)(?: right now|\?|$)"
+
 # Regex to extract numeric temperature from a string like "31.36°C" or "Temperature data unavailable. Default for Dhaka: 31°C"
 NUMERIC_TEMPERATURE_PATTERN = r"[-+]?\d*\.?\d+"
 

@@ -1,6 +1,7 @@
 from typing import Dict, List, Callable, Union
 
 TEMPERATURE_TOOL = "temperature"
+WEATHER_TOOL = "weather"
 CALC_TOOL = "calc"
 
 # Default word-to-symbol mapping for arithmetic operations
@@ -31,4 +32,10 @@ AGGREGATE_FUNCTIONS: Dict[str, Callable[[List[float]], Union[int, float]]] = {
     "max": max,
     "minimum": min,
     "min": min,
+}
+
+WEATHER_DESCRIPTIONS: dict[str, str] = {
+    "paris": "Mild and cloudy.",
+    "london": "Cool and rainy.",
+    "dhaka": "Hot and humid."
 }
