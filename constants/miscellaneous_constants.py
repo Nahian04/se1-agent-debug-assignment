@@ -3,6 +3,7 @@ from typing import Dict, List, Callable, Union
 TEMPERATURE_TOOL = "temperature"
 WEATHER_TOOL = "weather"
 CALC_TOOL = "calc"
+KB_TOOL = "kb"
 
 # Default word-to-symbol mapping for arithmetic operations
 WORD_OPS: Dict[str, str] = {

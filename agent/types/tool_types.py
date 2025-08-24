@@ -13,4 +13,14 @@ class TempArgs(BaseModel):
 class WeatherArgs(BaseModel):
     cities: List[str]
 
+class KBArgs(BaseModel):
+    q: str = None
+
+class KBEntry(BaseModel):
+    name: str
+    summary: str
+
+class KBData(BaseModel):
+    entries: List[KBEntry]
+
 IntermediateValues = Dict[str, Union[str, float, Dict]]

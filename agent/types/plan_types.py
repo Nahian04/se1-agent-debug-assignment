@@ -1,10 +1,10 @@
 from typing import Dict, Union, List
 from pydantic import BaseModel
-from .tool_types import CalcArgs, TempArgs, WeatherArgs
+from .tool_types import CalcArgs, KBArgs, TempArgs, WeatherArgs
 
 class PlanStepModel(BaseModel):
     tool: str
-    args: Union[CalcArgs, TempArgs, WeatherArgs]
+    args: Union[CalcArgs, KBArgs, TempArgs, WeatherArgs]
 
 AnswerResultType = Union[str, Dict[str, str], float, None]
 CalcResultType = Union[str, Dict[str, str], float, None]
