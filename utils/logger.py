@@ -4,8 +4,7 @@ import re
 from logging.handlers import TimedRotatingFileHandler
 from zipfile import ZipFile
 from datetime import datetime, timedelta
-
-LOG_DIR = "logs"
+from config.settings import LOG_DIR
 
 os.makedirs(LOG_DIR, exist_ok=True)
 ARCHIVE_DIR = os.path.join(LOG_DIR, "archive")
