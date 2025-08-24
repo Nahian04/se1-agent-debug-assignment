@@ -1,31 +1,66 @@
-import json, random
+from typing import List
+from pydantic import ValidationError
+from constants.tool_constants import PARSERS, TOOL_MODELS
+from .types.plan_types import PlanStepModel
+from utils.logger import get_logger
+from typeguard import typechecked
+from utils.latency_tracker import track_latency
 
-def call_llm(prompt: str):
+logger = get_logger(__name__)
+
+
+@track_latency(__name__)
+@typechecked
+def call_llm(prompt: str) -> List[PlanStepModel]:
     """
-    A fake LLM that *sometimes* returns a tool plan as a dict,
-    sometimes malformed JSON, and sometimes a direct answer.
+    Parse a prompt into a sequence of tool execution steps.
+
+    The prompt is processed by multiple parsers, each producing candidate
+    tool steps. Parsed steps are validated against their Pydantic models 
+    and combined into a final plan.
+
+    Args:
+        prompt (str): Input query or instruction.
+
+    Returns:
+        List[PlanStepModel]: Validated plan steps ready for execution.
+
+    Raises:
+        ValueError: If a step has no corresponding args model.
+        ValidationError: If a step's arguments fail Pydantic validation.
+        Exception: If any parser fails unexpectedly.
     """
-    
-    p = prompt.lower()
-    roll = random.random()
 
-    if roll < 0.35:
-        if "weather" in p or "temperature" in p:
-            city = "paris" if "paris" in p else ("london" if "london" in p else "dhaka")
-            return {"tool":"weather","args":{"city":city}}
-        if "%" in p or "add" in p or any(op in p for op in ["+","-","*","/"]):
-            return {"tool":"calc","args":{"expr":prompt}}
-        if "who is" in p:
-            name = prompt.split("who is",1)[1].strip().rstrip("?")
-            return {"tool":"kb","args":{"q":name}}
-        return {"tool":"weaher","args":{"cty":"paris"}}
+    p: str = prompt.lower()
+    logger.info("Received LLM prompt: %s", p)
 
-    if roll < 0.60:
-        return '{"tool": "weather", "args": {"city": "Pa ris" }'
+    tools: List[PlanStepModel] = []
 
-    if roll < 0.80:
-        return 'TOOL:calc EXPR="12.5% of 243"'
+    for name, parser in PARSERS.items():
+        try:
+            result_dicts: List[dict] = parser(p)
 
-    if "ada lovelace" in p:
-        return "Ada Lovelace was a 19th-century mathematician and early computing pioneer."
-    return "I think you are asking about: " + prompt[:60]
+            # Converting dictionaries to Pydantic models with the correct args type
+            result: List[PlanStepModel] = []
+            for step_dict in result_dicts:
+                tool_name: str = step_dict["tool"]
+                args_model = TOOL_MODELS.get(tool_name)
+
+                if not args_model:
+                    raise ValueError(f"No args model defined for tool {tool_name}")
+            
+                try:
+                    parsed_args = args_model.model_validate(step_dict.get("args", {}))
+                    result.append(PlanStepModel(tool=tool_name, args=parsed_args))
+                except ValidationError as e:
+                    logger.error("ValidationError: %s", e)
+                
+            if result:
+                tools.extend(result)
+
+            logger.info("Parsed %s tools: %s", name, result)
+        except Exception:
+            logger.exception("Error parsing %s tools", name)
+
+    logger.info("Final tools plan: %s", tools)
+    return tools
