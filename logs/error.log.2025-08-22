@@ -1,0 +1,7 @@
+2025-08-22 18:02:13 | ERROR    | my_app | Error message (goes to error.log)
+2025-08-22 18:02:13 | CRITICAL | my_app | Critical message (goes to error.log)
+2025-08-22 18:07:15 - ERROR    - my_app - Error message (goes to error.log)
+2025-08-22 18:07:15 - CRITICAL - my_app - Critical message (goes to error.log)
+2025-08-22 18:07:36 - [ERROR   ] - [my_app] - Error message (goes to error.log)
+2025-08-22 18:07:36 - [CRITICAL] - [my_app] - Critical message (goes to error.log)
+2025-08-22 18:09:14 - [ERROR   ] - [agent.agent] - plan [{'tool': 'temperature', 'args': {'cities': ['london', 'paris'], 'operation': 'average'}}, {'tool': 'calc', 'args': {'expr': '+ 10'}}]

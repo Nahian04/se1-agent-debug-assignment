@@ -1,0 +1,1388 @@
+2025-08-24 11:45:19 - [ERROR] - [agent.tools.weather_tools] - Error retrieving weather for city: ''
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/tools/weather_tools.py", line 23, in weather
+    return description
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_functions.py", line 166, in check_return_type
+    check_type_internal(retval, annotation, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 965, in check_type_internal
+    raise TypeCheckError(f"is not an instance of {qualified_name(origin_type)}")
+typeguard.TypeCheckError: the return value (None) is not an instance of str
+2025-08-24 11:46:47 - [ERROR] - [agent.tools.weather_tools] - Error retrieving weather for city: ''
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/tools/weather_tools.py", line 24, in weather
+    return description
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_functions.py", line 166, in check_return_type
+    check_type_internal(retval, annotation, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 965, in check_type_internal
+    raise TypeCheckError(f"is not an instance of {qualified_name(origin_type)}")
+typeguard.TypeCheckError: the return value (None) is not an instance of str
+2025-08-24 11:51:49 - [ERROR] - [agent.llm_parsers.weather_parser] - Error parsing weather from prompt: summarize today’s weather in londo in 3 words.
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/weather_parser.py", line 54, in parse_weather
+    cities = ""
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_functions.py", line 283, in check_variable_assignment
+    check_type_internal(val, annotation, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 960, in check_type_internal
+    checker(value, origin_type, args, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 295, in check_list
+    raise TypeCheckError("is not a list")
+typeguard.TypeCheckError: value assigned to cities (str) is not a list
+2025-08-24 11:51:49 - [ERROR] - [agent.llm] - Error parsing weather tools
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm.py", line 50, in call_llm
+    result_dicts: List[dict] = parser(p)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/weather_parser.py", line 54, in parse_weather
+    cities = ""
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_functions.py", line 283, in check_variable_assignment
+    check_type_internal(val, annotation, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 960, in check_type_internal
+    checker(value, origin_type, args, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 295, in check_list
+    raise TypeCheckError("is not a list")
+typeguard.TypeCheckError: value assigned to cities (str) is not a list
+2025-08-24 12:03:51 - [ERROR] - [agent.agent] - Failed to generate plan from LLM
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/agent.py", line 51, in answer
+    plan_raw: Optional[List[dict]] = call_llm(q)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_functions.py", line 283, in check_variable_assignment
+    check_type_internal(val, annotation, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 960, in check_type_internal
+    checker(value, origin_type, args, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 427, in check_union
+    raise TypeCheckError(f"did not match any element in the union:\n{formatted_errors}")
+typeguard.TypeCheckError: value assigned to plan_raw (list) did not match any element in the union:
+  List[dict]: item 0 is not a dict
+  NoneType: is not an instance of NoneType
+2025-08-24 12:03:52 - [ERROR] - [agent.agent] - Failed to generate plan from LLM
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/agent.py", line 51, in answer
+    plan_raw: Optional[List[dict]] = call_llm(q)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_functions.py", line 283, in check_variable_assignment
+    check_type_internal(val, annotation, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 960, in check_type_internal
+    checker(value, origin_type, args, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 427, in check_union
+    raise TypeCheckError(f"did not match any element in the union:\n{formatted_errors}")
+typeguard.TypeCheckError: value assigned to plan_raw (list) did not match any element in the union:
+  List[dict]: item 0 is not a dict
+  NoneType: is not an instance of NoneType
+2025-08-24 12:03:55 - [ERROR] - [agent.agent] - Failed to generate plan from LLM
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/agent.py", line 51, in answer
+    plan_raw: Optional[List[dict]] = call_llm(q)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_functions.py", line 283, in check_variable_assignment
+    check_type_internal(val, annotation, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 960, in check_type_internal
+    checker(value, origin_type, args, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 427, in check_union
+    raise TypeCheckError(f"did not match any element in the union:\n{formatted_errors}")
+typeguard.TypeCheckError: value assigned to plan_raw (list) did not match any element in the union:
+  List[dict]: item 0 is not a dict
+  NoneType: is not an instance of NoneType
+
+
+
+
+
+
+
+
+
+2025-08-24 12:04:21 - [ERROR] - [agent.agent] - Failed to generate plan from LLM
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/agent.py", line 51, in answer
+    plan_raw: Optional[List[dict]] = call_llm(q)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_functions.py", line 283, in check_variable_assignment
+    check_type_internal(val, annotation, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 960, in check_type_internal
+    checker(value, origin_type, args, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 427, in check_union
+    raise TypeCheckError(f"did not match any element in the union:\n{formatted_errors}")
+typeguard.TypeCheckError: value assigned to plan_raw (list) did not match any element in the union:
+  List[dict]: item 0 is not a dict
+  NoneType: is not an instance of NoneType
+2025-08-24 12:05:55 - [ERROR] - [agent.agent] - Failed to generate plan from LLM
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/agent.py", line 51, in answer
+    plan_raw: Optional[List[dict]] = call_llm(q)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_functions.py", line 283, in check_variable_assignment
+    check_type_internal(val, annotation, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 960, in check_type_internal
+    checker(value, origin_type, args, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 427, in check_union
+    raise TypeCheckError(f"did not match any element in the union:\n{formatted_errors}")
+typeguard.TypeCheckError: value assigned to plan_raw (list) did not match any element in the union:
+  List[dict]: item 0 is not a dict
+  NoneType: is not an instance of NoneType
+2025-08-24 12:06:05 - [ERROR] - [agent.agent] - TypeError: value assigned to result (float) is not an instance of str
+2025-08-24 12:06:57 - [ERROR] - [agent.agent] - TypeError: value assigned to result (float) is not an instance of str
+2025-08-24 12:07:43 - [ERROR] - [agent.agent] - TypeError: value assigned to result (float) is not an instance of str
+2025-08-24 12:08:10 - [ERROR] - [agent.agent] - TypeError: value assigned to result (float) is not an instance of str
+2025-08-24 12:08:35 - [ERROR] - [agent.agent] - TypeError: value assigned to result (float) is not an instance of str
+2025-08-24 12:08:40 - [ERROR] - [agent.agent] - TypeError: value assigned to result (float) is not an instance of str
+2025-08-24 12:08:45 - [ERROR] - [agent.agent] - TypeError: value assigned to result (float) is not an instance of str
+2025-08-24 12:08:55 - [ERROR] - [agent.agent] - TypeError: value assigned to result (float) is not an instance of str
+2025-08-24 13:48:48 - [ERROR] - [agent.tools.kb_tools] - Failed to load KB data from /home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/config/data/kb.json: [Errno 2] No such file or directory: '/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/config/data/kb.json'
+2025-08-24 13:48:54 - [ERROR] - [agent.tools.kb_tools] - Failed to load KB data from /home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/config/data/kb.json: [Errno 2] No such file or directory: '/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/config/data/kb.json'
+2025-08-24 13:49:13 - [ERROR] - [agent.tools.kb_tools] - Failed to load KB data from /home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/config/data/kb.json: [Errno 2] No such file or directory: '/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/config/data/kb.json'
+2025-08-24 13:49:27 - [ERROR] - [agent.tools.kb_tools] - Failed to load KB data from /home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/config/data/kb.json: [Errno 2] No such file or directory: '/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/config/data/kb.json'
+2025-08-24 13:49:36 - [ERROR] - [agent.tools.kb_tools] - Failed to load KB data from /home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/config/data/kb.json: [Errno 2] No such file or directory: '/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/config/data/kb.json'
+2025-08-24 14:28:51 - [ERROR] - [agent.llm_parsers.calc_parser] - Error in parse_calc with prompt: who is 1 + 1?
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/calc_parser.py", line 100, in parse_calc
+    binary_tools = _parse_binary(prompt, word_ops)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/calc_parser.py", line 39, in _parse_binary
+    for n1, op, n2 in re.findall(binary_pattern, prompt, re.IGNORECASE):
+ValueError: not enough values to unpack (expected 3, got 2)
+2025-08-24 14:28:51 - [ERROR] - [agent.llm] - Error parsing calc tools
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm.py", line 41, in call_llm
+    result_dicts: List[dict] = parser(p)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/utils/latency_tracker.py", line 22, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/calc_parser.py", line 100, in parse_calc
+    binary_tools = _parse_binary(prompt, word_ops)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/calc_parser.py", line 39, in _parse_binary
+    for n1, op, n2 in re.findall(binary_pattern, prompt, re.IGNORECASE):
+ValueError: not enough values to unpack (expected 3, got 2)
+2025-08-24 14:28:56 - [ERROR] - [agent.llm_parsers.calc_parser] - Error in parse_calc with prompt: what is 1 + 1?
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/calc_parser.py", line 100, in parse_calc
+    binary_tools = _parse_binary(prompt, word_ops)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/calc_parser.py", line 39, in _parse_binary
+    for n1, op, n2 in re.findall(binary_pattern, prompt, re.IGNORECASE):
+ValueError: not enough values to unpack (expected 3, got 2)
+2025-08-24 14:28:56 - [ERROR] - [agent.llm] - Error parsing calc tools
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm.py", line 41, in call_llm
+    result_dicts: List[dict] = parser(p)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/utils/latency_tracker.py", line 22, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/calc_parser.py", line 100, in parse_calc
+    binary_tools = _parse_binary(prompt, word_ops)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/calc_parser.py", line 39, in _parse_binary
+    for n1, op, n2 in re.findall(binary_pattern, prompt, re.IGNORECASE):
+ValueError: not enough values to unpack (expected 3, got 2)
+2025-08-24 14:29:05 - [ERROR] - [agent.llm_parsers.calc_parser] - Error in parse_calc with prompt: what is 1 plus 1?
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/calc_parser.py", line 100, in parse_calc
+    binary_tools = _parse_binary(prompt, word_ops)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/calc_parser.py", line 39, in _parse_binary
+    for n1, op, n2 in re.findall(binary_pattern, prompt, re.IGNORECASE):
+ValueError: not enough values to unpack (expected 3, got 2)
+2025-08-24 14:29:05 - [ERROR] - [agent.llm] - Error parsing calc tools
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm.py", line 41, in call_llm
+    result_dicts: List[dict] = parser(p)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/utils/latency_tracker.py", line 22, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/calc_parser.py", line 100, in parse_calc
+    binary_tools = _parse_binary(prompt, word_ops)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/calc_parser.py", line 39, in _parse_binary
+    for n1, op, n2 in re.findall(binary_pattern, prompt, re.IGNORECASE):
+ValueError: not enough values to unpack (expected 3, got 2)
+2025-08-24 14:29:14 - [ERROR] - [agent.llm_parsers.calc_parser] - Error in parse_calc with prompt: what is 1 plus 1?
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/calc_parser.py", line 101, in parse_calc
+    binary_tools = _parse_binary(prompt, word_ops)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/calc_parser.py", line 39, in _parse_binary
+    for n1, op, n2 in re.findall(binary_pattern, prompt, re.IGNORECASE):
+ValueError: not enough values to unpack (expected 3, got 2)
+2025-08-24 14:29:14 - [ERROR] - [agent.llm] - Error parsing calc tools
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm.py", line 41, in call_llm
+    result_dicts: List[dict] = parser(p)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/utils/latency_tracker.py", line 22, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/calc_parser.py", line 101, in parse_calc
+    binary_tools = _parse_binary(prompt, word_ops)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/calc_parser.py", line 39, in _parse_binary
+    for n1, op, n2 in re.findall(binary_pattern, prompt, re.IGNORECASE):
+ValueError: not enough values to unpack (expected 3, got 2)
+2025-08-24 14:29:28 - [ERROR] - [agent.llm_parsers.calc_parser] - Error in parse_calc with prompt: what is 1 plus 1?
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/calc_parser.py", line 101, in parse_calc
+    binary_tools = _parse_binary(prompt, word_ops)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/calc_parser.py", line 40, in _parse_binary
+    for n1, op, n2 in re.findall(binary_pattern, prompt, re.IGNORECASE):
+ValueError: not enough values to unpack (expected 3, got 2)
+2025-08-24 14:29:28 - [ERROR] - [agent.llm] - Error parsing calc tools
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm.py", line 41, in call_llm
+    result_dicts: List[dict] = parser(p)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/utils/latency_tracker.py", line 22, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/calc_parser.py", line 101, in parse_calc
+    binary_tools = _parse_binary(prompt, word_ops)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/calc_parser.py", line 40, in _parse_binary
+    for n1, op, n2 in re.findall(binary_pattern, prompt, re.IGNORECASE):
+ValueError: not enough values to unpack (expected 3, got 2)
+2025-08-24 14:29:42 - [ERROR] - [agent.llm_parsers.calc_parser] - Error in parse_calc with prompt: what is 1 plus 1?
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/calc_parser.py", line 101, in parse_calc
+    binary_tools = _parse_binary(prompt, word_ops)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/calc_parser.py", line 39, in _parse_binary
+    for n1, op, n2 in re.findall(binary_pattern, prompt, re.IGNORECASE):
+ValueError: not enough values to unpack (expected 3, got 2)
+2025-08-24 14:29:42 - [ERROR] - [agent.llm] - Error parsing calc tools
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm.py", line 41, in call_llm
+    result_dicts: List[dict] = parser(p)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/utils/latency_tracker.py", line 22, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/calc_parser.py", line 101, in parse_calc
+    binary_tools = _parse_binary(prompt, word_ops)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/calc_parser.py", line 39, in _parse_binary
+    for n1, op, n2 in re.findall(binary_pattern, prompt, re.IGNORECASE):
+ValueError: not enough values to unpack (expected 3, got 2)
+2025-08-24 14:30:45 - [ERROR] - [agent.llm_parsers.calc_parser] - Error in parse_calc with prompt: what is 1 plus 1?
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/calc_parser.py", line 100, in parse_calc
+    binary_tools = _parse_binary(prompt, word_ops)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/calc_parser.py", line 39, in _parse_binary
+    for n1, op, n2 in re.findall(binary_pattern, prompt):
+ValueError: not enough values to unpack (expected 3, got 2)
+2025-08-24 14:30:45 - [ERROR] - [agent.llm] - Error parsing calc tools
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm.py", line 41, in call_llm
+    result_dicts: List[dict] = parser(p)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/utils/latency_tracker.py", line 22, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/calc_parser.py", line 100, in parse_calc
+    binary_tools = _parse_binary(prompt, word_ops)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/calc_parser.py", line 39, in _parse_binary
+    for n1, op, n2 in re.findall(binary_pattern, prompt):
+ValueError: not enough values to unpack (expected 3, got 2)
+2025-08-24 15:23:29 - [ERROR] - [agent.llm_parsers.temp_parser] - Error parsing temperature from prompt: summarize today’s temperature in london
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/temp_parser.py", line 51, in parse_temperature
+    city_part = re.sub(CITY_CLEAN_PATTERN, match.group(2).lower())
+TypeError: sub() missing 1 required positional argument: 'string'
+2025-08-24 15:23:29 - [ERROR] - [agent.llm] - Error parsing temperature tools
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm.py", line 41, in call_llm
+    result_dicts: List[dict] = parser(p)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/utils/latency_tracker.py", line 22, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/temp_parser.py", line 51, in parse_temperature
+    city_part = re.sub(CITY_CLEAN_PATTERN, match.group(2).lower())
+TypeError: sub() missing 1 required positional argument: 'string'
+2025-08-24 15:23:38 - [ERROR] - [agent.llm_parsers.temp_parser] - Error parsing temperature from prompt: summarize today’s temperature in london
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/temp_parser.py", line 51, in parse_temperature
+    city_part = re.sub(CITY_CLEAN_PATTERN, match.group(2).lower())
+TypeError: sub() missing 1 required positional argument: 'string'
+2025-08-24 15:23:38 - [ERROR] - [agent.llm] - Error parsing temperature tools
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm.py", line 41, in call_llm
+    result_dicts: List[dict] = parser(p)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/utils/latency_tracker.py", line 22, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/temp_parser.py", line 51, in parse_temperature
+    city_part = re.sub(CITY_CLEAN_PATTERN, match.group(2).lower())
+TypeError: sub() missing 1 required positional argument: 'string'
+2025-08-24 15:23:43 - [ERROR] - [agent.llm_parsers.temp_parser] - Error parsing temperature from prompt: summarize today’s temperature in london
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/temp_parser.py", line 51, in parse_temperature
+    city_part = re.sub(CITY_CLEAN_PATTERN, match.group(2).lower())
+TypeError: sub() missing 1 required positional argument: 'string'
+2025-08-24 15:23:43 - [ERROR] - [agent.llm] - Error parsing temperature tools
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm.py", line 41, in call_llm
+    result_dicts: List[dict] = parser(p)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/utils/latency_tracker.py", line 22, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/temp_parser.py", line 51, in parse_temperature
+    city_part = re.sub(CITY_CLEAN_PATTERN, match.group(2).lower())
+TypeError: sub() missing 1 required positional argument: 'string'
+2025-08-24 15:23:50 - [ERROR] - [agent.llm_parsers.temp_parser] - Error parsing temperature from prompt: what is temperature in london
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/temp_parser.py", line 51, in parse_temperature
+    city_part = re.sub(CITY_CLEAN_PATTERN, match.group(2).lower())
+TypeError: sub() missing 1 required positional argument: 'string'
+2025-08-24 15:23:50 - [ERROR] - [agent.llm] - Error parsing temperature tools
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm.py", line 41, in call_llm
+    result_dicts: List[dict] = parser(p)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/utils/latency_tracker.py", line 22, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/temp_parser.py", line 51, in parse_temperature
+    city_part = re.sub(CITY_CLEAN_PATTERN, match.group(2).lower())
+TypeError: sub() missing 1 required positional argument: 'string'
+2025-08-24 15:25:10 - [ERROR] - [agent.llm_parsers.temp_parser] - Error parsing temperature from prompt: what is temperature in london
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/temp_parser.py", line 51, in parse_temperature
+    city_part = re.sub(CITY_CLEAN_PATTERN, match.group(2).lower())
+TypeError: sub() missing 1 required positional argument: 'string'
+2025-08-24 15:25:10 - [ERROR] - [agent.llm] - Error parsing temperature tools
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm.py", line 41, in call_llm
+    result_dicts: List[dict] = parser(p)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/utils/latency_tracker.py", line 22, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/temp_parser.py", line 51, in parse_temperature
+    city_part = re.sub(CITY_CLEAN_PATTERN, match.group(2).lower())
+TypeError: sub() missing 1 required positional argument: 'string'
+2025-08-24 15:25:47 - [ERROR] - [agent.llm_parsers.temp_parser] - Error parsing temperature from prompt: what is temperature in london
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/temp_parser.py", line 51, in parse_temperature
+    city_part = re.sub(CITY_CLEAN_PATTERN, match.group(2).lower())
+TypeError: sub() missing 1 required positional argument: 'string'
+2025-08-24 15:25:47 - [ERROR] - [agent.llm] - Error parsing temperature tools
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm.py", line 41, in call_llm
+    result_dicts: List[dict] = parser(p)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/utils/latency_tracker.py", line 22, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/temp_parser.py", line 51, in parse_temperature
+    city_part = re.sub(CITY_CLEAN_PATTERN, match.group(2).lower())
+TypeError: sub() missing 1 required positional argument: 'string'
+2025-08-24 15:26:28 - [ERROR] - [agent.llm_parsers.temp_parser] - Error parsing temperature from prompt: what is temperature in london
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/temp_parser.py", line 51, in parse_temperature
+    city_part = re.sub(CITY_CLEAN_PATTERN, match.group(2).lower())
+TypeError: sub() missing 1 required positional argument: 'string'
+2025-08-24 15:26:28 - [ERROR] - [agent.llm] - Error parsing temperature tools
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm.py", line 41, in call_llm
+    result_dicts: List[dict] = parser(p)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/utils/latency_tracker.py", line 22, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/temp_parser.py", line 51, in parse_temperature
+    city_part = re.sub(CITY_CLEAN_PATTERN, match.group(2).lower())
+TypeError: sub() missing 1 required positional argument: 'string'
+2025-08-24 15:26:38 - [ERROR] - [agent.llm_parsers.temp_parser] - Error parsing temperature from prompt: what is temperature in london
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/temp_parser.py", line 51, in parse_temperature
+    city_part = re.sub(CITY_CLEAN_PATTERN, match.group(2).lower())
+TypeError: sub() missing 1 required positional argument: 'string'
+2025-08-24 15:26:38 - [ERROR] - [agent.llm] - Error parsing temperature tools
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm.py", line 41, in call_llm
+    result_dicts: List[dict] = parser(p)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/utils/latency_tracker.py", line 22, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/temp_parser.py", line 51, in parse_temperature
+    city_part = re.sub(CITY_CLEAN_PATTERN, match.group(2).lower())
+TypeError: sub() missing 1 required positional argument: 'string'
+2025-08-24 15:26:45 - [ERROR] - [agent.llm_parsers.temp_parser] - Error parsing temperature from prompt: what is temperature in london
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/temp_parser.py", line 51, in parse_temperature
+    city_part = re.sub(CITY_CLEAN_PATTERN, match.group(2).lower())
+TypeError: sub() missing 1 required positional argument: 'string'
+2025-08-24 15:26:45 - [ERROR] - [agent.llm] - Error parsing temperature tools
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm.py", line 41, in call_llm
+    result_dicts: List[dict] = parser(p)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/utils/latency_tracker.py", line 22, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/temp_parser.py", line 51, in parse_temperature
+    city_part = re.sub(CITY_CLEAN_PATTERN, match.group(2).lower())
+TypeError: sub() missing 1 required positional argument: 'string'
+2025-08-24 15:26:57 - [ERROR] - [agent.llm_parsers.temp_parser] - Error parsing temperature from prompt: what is temperature in london
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/temp_parser.py", line 51, in parse_temperature
+    city_part = re.sub(CITY_CLEAN_PATTERN, match.group(2).lower())
+TypeError: sub() missing 1 required positional argument: 'string'
+2025-08-24 15:26:57 - [ERROR] - [agent.llm] - Error parsing temperature tools
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm.py", line 41, in call_llm
+    result_dicts: List[dict] = parser(p)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/utils/latency_tracker.py", line 22, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/temp_parser.py", line 51, in parse_temperature
+    city_part = re.sub(CITY_CLEAN_PATTERN, match.group(2).lower())
+TypeError: sub() missing 1 required positional argument: 'string'
+2025-08-24 15:27:02 - [ERROR] - [agent.llm_parsers.temp_parser] - Error parsing temperature from prompt: what is temperature in london
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/temp_parser.py", line 52, in parse_temperature
+    city_part = re.sub(CITY_CLEAN_PATTERN, match.group(2).lower())
+TypeError: sub() missing 1 required positional argument: 'string'
+2025-08-24 15:27:02 - [ERROR] - [agent.llm] - Error parsing temperature tools
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm.py", line 41, in call_llm
+    result_dicts: List[dict] = parser(p)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/utils/latency_tracker.py", line 22, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/temp_parser.py", line 52, in parse_temperature
+    city_part = re.sub(CITY_CLEAN_PATTERN, match.group(2).lower())
+TypeError: sub() missing 1 required positional argument: 'string'
+2025-08-24 15:27:21 - [ERROR] - [agent.llm_parsers.temp_parser] - Error parsing temperature from prompt: what is temperature in london
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/temp_parser.py", line 52, in parse_temperature
+    city_part = re.sub(CITY_CLEAN_PATTERN, match.group(2).lower())
+TypeError: sub() missing 1 required positional argument: 'string'
+2025-08-24 15:27:21 - [ERROR] - [agent.llm] - Error parsing temperature tools
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm.py", line 41, in call_llm
+    result_dicts: List[dict] = parser(p)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/utils/latency_tracker.py", line 22, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/temp_parser.py", line 52, in parse_temperature
+    city_part = re.sub(CITY_CLEAN_PATTERN, match.group(2).lower())
+TypeError: sub() missing 1 required positional argument: 'string'
+2025-08-24 15:27:31 - [ERROR] - [agent.llm_parsers.temp_parser] - Error parsing temperature from prompt: what is temperature in london
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/temp_parser.py", line 52, in parse_temperature
+    city_part = re.sub(CITY_CLEAN_PATTERN, match.group(2).lower())
+TypeError: sub() missing 1 required positional argument: 'string'
+2025-08-24 15:27:31 - [ERROR] - [agent.llm] - Error parsing temperature tools
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm.py", line 41, in call_llm
+    result_dicts: List[dict] = parser(p)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/utils/latency_tracker.py", line 22, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/temp_parser.py", line 52, in parse_temperature
+    city_part = re.sub(CITY_CLEAN_PATTERN, match.group(2).lower())
+TypeError: sub() missing 1 required positional argument: 'string'
+2025-08-24 15:27:42 - [ERROR] - [agent.llm_parsers.temp_parser] - Error parsing temperature from prompt: what is temperature in london
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/temp_parser.py", line 52, in parse_temperature
+    city_part = re.sub(CITY_CLEAN_PATTERN, match.group(2).lower())
+TypeError: sub() missing 1 required positional argument: 'string'
+2025-08-24 15:27:42 - [ERROR] - [agent.llm] - Error parsing temperature tools
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm.py", line 41, in call_llm
+    result_dicts: List[dict] = parser(p)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/utils/latency_tracker.py", line 22, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/temp_parser.py", line 52, in parse_temperature
+    city_part = re.sub(CITY_CLEAN_PATTERN, match.group(2).lower())
+TypeError: sub() missing 1 required positional argument: 'string'
+2025-08-24 15:29:17 - [ERROR] - [agent.llm_parsers.temp_parser] - Error parsing temperature from prompt: what is temperature in london
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/temp_parser.py", line 54, in parse_temperature
+    after_weather = re.sub(CITY_CLEAN_PATTERN, "", match.group(1).lower())
+AttributeError: 'NoneType' object has no attribute 'lower'
+2025-08-24 15:29:17 - [ERROR] - [agent.llm] - Error parsing temperature tools
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm.py", line 41, in call_llm
+    result_dicts: List[dict] = parser(p)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/utils/latency_tracker.py", line 22, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/temp_parser.py", line 54, in parse_temperature
+    after_weather = re.sub(CITY_CLEAN_PATTERN, "", match.group(1).lower())
+AttributeError: 'NoneType' object has no attribute 'lower'
+2025-08-24 15:29:26 - [ERROR] - [agent.llm_parsers.temp_parser] - Error parsing temperature from prompt: what is temperature in london
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/temp_parser.py", line 54, in parse_temperature
+    after_weather = re.sub(CITY_CLEAN_PATTERN, "", match.group(1).lower())
+AttributeError: 'NoneType' object has no attribute 'lower'
+2025-08-24 15:29:26 - [ERROR] - [agent.llm] - Error parsing temperature tools
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm.py", line 41, in call_llm
+    result_dicts: List[dict] = parser(p)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/utils/latency_tracker.py", line 22, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/temp_parser.py", line 54, in parse_temperature
+    after_weather = re.sub(CITY_CLEAN_PATTERN, "", match.group(1).lower())
+AttributeError: 'NoneType' object has no attribute 'lower'
+2025-08-24 15:29:38 - [ERROR] - [agent.llm_parsers.temp_parser] - Error parsing temperature from prompt: what is temperature in london
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/temp_parser.py", line 54, in parse_temperature
+    after_weather = re.sub(CITY_CLEAN_PATTERN, "", match.group(1).lower())
+AttributeError: 'NoneType' object has no attribute 'lower'
+2025-08-24 15:29:38 - [ERROR] - [agent.llm] - Error parsing temperature tools
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm.py", line 41, in call_llm
+    result_dicts: List[dict] = parser(p)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/utils/latency_tracker.py", line 22, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/temp_parser.py", line 54, in parse_temperature
+    after_weather = re.sub(CITY_CLEAN_PATTERN, "", match.group(1).lower())
+AttributeError: 'NoneType' object has no attribute 'lower'
+2025-08-24 15:29:45 - [ERROR] - [agent.llm_parsers.temp_parser] - Error parsing temperature from prompt: what is temperature in london
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/temp_parser.py", line 54, in parse_temperature
+    after_weather = re.sub(CITY_CLEAN_PATTERN, "", match.group(1).lower())
+AttributeError: 'NoneType' object has no attribute 'lower'
+2025-08-24 15:29:45 - [ERROR] - [agent.llm] - Error parsing temperature tools
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm.py", line 41, in call_llm
+    result_dicts: List[dict] = parser(p)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/utils/latency_tracker.py", line 22, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/temp_parser.py", line 54, in parse_temperature
+    after_weather = re.sub(CITY_CLEAN_PATTERN, "", match.group(1).lower())
+AttributeError: 'NoneType' object has no attribute 'lower'
+2025-08-24 15:29:51 - [ERROR] - [agent.llm_parsers.temp_parser] - Error parsing temperature from prompt: what is temperature in london
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/temp_parser.py", line 54, in parse_temperature
+    after_weather = re.sub(CITY_CLEAN_PATTERN, "", match.group(1).lower())
+AttributeError: 'NoneType' object has no attribute 'lower'
+2025-08-24 15:29:51 - [ERROR] - [agent.llm] - Error parsing temperature tools
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm.py", line 41, in call_llm
+    result_dicts: List[dict] = parser(p)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/utils/latency_tracker.py", line 22, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/temp_parser.py", line 54, in parse_temperature
+    after_weather = re.sub(CITY_CLEAN_PATTERN, "", match.group(1).lower())
+AttributeError: 'NoneType' object has no attribute 'lower'
+2025-08-24 15:30:07 - [ERROR] - [agent.llm_parsers.temp_parser] - Error parsing temperature from prompt: what is temperature in london
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/temp_parser.py", line 54, in parse_temperature
+    after_weather = re.sub(CITY_CLEAN_PATTERN, "", match.group(1).lower())
+AttributeError: 'NoneType' object has no attribute 'lower'
+2025-08-24 15:30:07 - [ERROR] - [agent.llm] - Error parsing temperature tools
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm.py", line 41, in call_llm
+    result_dicts: List[dict] = parser(p)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/utils/latency_tracker.py", line 22, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/temp_parser.py", line 54, in parse_temperature
+    after_weather = re.sub(CITY_CLEAN_PATTERN, "", match.group(1).lower())
+AttributeError: 'NoneType' object has no attribute 'lower'
+2025-08-24 15:30:16 - [ERROR] - [agent.llm_parsers.temp_parser] - Error parsing temperature from prompt: what is temperature in london
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/temp_parser.py", line 54, in parse_temperature
+    after_weather = re.sub(CITY_CLEAN_PATTERN, "", match.group(1).lower())
+AttributeError: 'NoneType' object has no attribute 'lower'
+2025-08-24 15:30:16 - [ERROR] - [agent.llm] - Error parsing temperature tools
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm.py", line 41, in call_llm
+    result_dicts: List[dict] = parser(p)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/utils/latency_tracker.py", line 22, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/temp_parser.py", line 54, in parse_temperature
+    after_weather = re.sub(CITY_CLEAN_PATTERN, "", match.group(1).lower())
+AttributeError: 'NoneType' object has no attribute 'lower'
+2025-08-24 15:31:17 - [ERROR] - [agent.llm_parsers.temp_parser] - Error parsing temperature from prompt: what is temperature in london
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/temp_parser.py", line 54, in parse_temperature
+    after_weather = re.sub(CITY_CLEAN_PATTERN, "", match.group(1).lower())
+AttributeError: 'str' object has no attribute 'group'
+2025-08-24 15:31:17 - [ERROR] - [agent.llm] - Error parsing temperature tools
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm.py", line 41, in call_llm
+    result_dicts: List[dict] = parser(p)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/utils/latency_tracker.py", line 22, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/temp_parser.py", line 54, in parse_temperature
+    after_weather = re.sub(CITY_CLEAN_PATTERN, "", match.group(1).lower())
+AttributeError: 'str' object has no attribute 'group'
+2025-08-24 15:31:40 - [ERROR] - [agent.llm_parsers.temp_parser] - Error parsing temperature from prompt: what is temperature in london
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/temp_parser.py", line 55, in parse_temperature
+    after_weather = re.sub(CITY_CLEAN_PATTERN, "", match.group(1).lower())
+AttributeError: 'str' object has no attribute 'group'
+2025-08-24 15:31:40 - [ERROR] - [agent.llm] - Error parsing temperature tools
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm.py", line 41, in call_llm
+    result_dicts: List[dict] = parser(p)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/utils/latency_tracker.py", line 22, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/temp_parser.py", line 55, in parse_temperature
+    after_weather = re.sub(CITY_CLEAN_PATTERN, "", match.group(1).lower())
+AttributeError: 'str' object has no attribute 'group'
+2025-08-24 15:31:59 - [ERROR] - [agent.llm_parsers.temp_parser] - Error parsing temperature from prompt: what is temperature in london
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/temp_parser.py", line 55, in parse_temperature
+    after_weather = re.sub(CITY_CLEAN_PATTERN, "", match.group(1).lower())
+AttributeError: 'str' object has no attribute 'group'
+2025-08-24 15:31:59 - [ERROR] - [agent.llm] - Error parsing temperature tools
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm.py", line 41, in call_llm
+    result_dicts: List[dict] = parser(p)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/utils/latency_tracker.py", line 22, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/temp_parser.py", line 55, in parse_temperature
+    after_weather = re.sub(CITY_CLEAN_PATTERN, "", match.group(1).lower())
+AttributeError: 'str' object has no attribute 'group'
+2025-08-24 15:32:40 - [ERROR] - [agent.llm_parsers.temp_parser] - Error parsing temperature from prompt: what is temperature in london
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/temp_parser.py", line 55, in parse_temperature
+    after_weather = re.sub(CITY_CLEAN_PATTERN, "", match.group(1).lower())
+AttributeError: 'str' object has no attribute 'group'
+2025-08-24 15:32:40 - [ERROR] - [agent.llm] - Error parsing temperature tools
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm.py", line 41, in call_llm
+    result_dicts: List[dict] = parser(p)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/utils/latency_tracker.py", line 22, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/temp_parser.py", line 55, in parse_temperature
+    after_weather = re.sub(CITY_CLEAN_PATTERN, "", match.group(1).lower())
+AttributeError: 'str' object has no attribute 'group'
+2025-08-24 15:33:12 - [ERROR] - [agent.llm_parsers.temp_parser] - Error parsing temperature from prompt: what is temperature in london
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/temp_parser.py", line 55, in parse_temperature
+    after_weather = re.sub(CITY_CLEAN_PATTERN, "", match.group(1).lower())
+AttributeError: 'str' object has no attribute 'group'
+2025-08-24 15:33:12 - [ERROR] - [agent.llm] - Error parsing temperature tools
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm.py", line 41, in call_llm
+    result_dicts: List[dict] = parser(p)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/utils/latency_tracker.py", line 22, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/temp_parser.py", line 55, in parse_temperature
+    after_weather = re.sub(CITY_CLEAN_PATTERN, "", match.group(1).lower())
+AttributeError: 'str' object has no attribute 'group'
+2025-08-24 15:33:18 - [ERROR] - [agent.llm_parsers.temp_parser] - Error parsing temperature from prompt: what is temperature in london?
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/temp_parser.py", line 55, in parse_temperature
+    after_weather = re.sub(CITY_CLEAN_PATTERN, "", match.group(1).lower())
+AttributeError: 'str' object has no attribute 'group'
+2025-08-24 15:33:18 - [ERROR] - [agent.llm] - Error parsing temperature tools
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm.py", line 41, in call_llm
+    result_dicts: List[dict] = parser(p)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/utils/latency_tracker.py", line 22, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/llm_parsers/temp_parser.py", line 55, in parse_temperature
+    after_weather = re.sub(CITY_CLEAN_PATTERN, "", match.group(1).lower())
+AttributeError: 'str' object has no attribute 'group'
+2025-08-24 15:35:49 - [ERROR] - [agent.agent] - TypeError: value assigned to result (dict) did not match any element in the union:
+  str: is not an instance of str
+  float: is neither float or int
+2025-08-24 15:36:07 - [ERROR] - [agent.agent] - TypeError: value assigned to result (dict) did not match any element in the union:
+  str: is not an instance of str
+  float: is neither float or int
+2025-08-24 15:36:28 - [ERROR] - [agent.agent] - TypeError: value assigned to result (dict) did not match any element in the union:
+  str: is not an instance of str
+  float: is neither float or int
+2025-08-24 15:36:44 - [ERROR] - [agent.agent] - TypeError: value assigned to result (dict) did not match any element in the union:
+  str: is not an instance of str
+  float: is neither float or int
+2025-08-24 15:36:53 - [ERROR] - [agent.agent] - TypeError: value assigned to result (dict) did not match any element in the union:
+  str: is not an instance of str
+  float: is neither float or int
+2025-08-24 15:36:59 - [ERROR] - [agent.agent] - TypeError: value assigned to result (dict) did not match any element in the union:
+  str: is not an instance of str
+  float: is neither float or int
+2025-08-24 15:38:55 - [ERROR] - [agent.agent] - TypeError: value assigned to result (dict) did not match any element in the union:
+  str: is not an instance of str
+  float: is neither float or int
+2025-08-24 15:39:12 - [ERROR] - [agent.agent] - TypeError: value assigned to result (dict) did not match any element in the union:
+  str: is not an instance of str
+  float: is neither float or int
+2025-08-24 15:39:19 - [ERROR] - [agent.agent] - TypeError: value assigned to result (dict) did not match any element in the union:
+  str: is not an instance of str
+  float: is neither float or int
+2025-08-24 15:39:37 - [ERROR] - [agent.agent] - TypeError: value assigned to result (dict) did not match any element in the union:
+  str: is not an instance of str
+  float: is neither float or int
+2025-08-24 15:40:05 - [ERROR] - [agent.agent] - TypeError: value assigned to result (dict) did not match any element in the union:
+  str: is not an instance of str
+  float: is neither float or int
+2025-08-24 15:40:48 - [ERROR] - [agent.agent] - TypeError: value assigned to result (dict) did not match any element in the union:
+  str: is not an instance of str
+  float: is neither float or int
+2025-08-24 15:47:44 - [ERROR] - [agent.tools.temp_tools] - Error retrieving temperatures for cities: [''] with operation: single
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/tools/temp_tools.py", line 47, in temp
+    return f"Temperature data unavailable. Default for {default_city.capitalize()}: {temp}"
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_functions.py", line 166, in check_return_type
+    check_type_internal(retval, annotation, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 960, in check_type_internal
+    checker(value, origin_type, args, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 213, in check_mapping
+    raise TypeCheckError("is not a dict")
+typeguard.TypeCheckError: the return value (str) is not a dict
+2025-08-24 15:47:56 - [ERROR] - [agent.tools.temp_tools] - Error retrieving temperatures for cities: [''] with operation: single
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/tools/temp_tools.py", line 47, in temp
+    return f"Temperature data unavailable. Default for {default_city.capitalize()}: {temp}"
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_functions.py", line 166, in check_return_type
+    check_type_internal(retval, annotation, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 960, in check_type_internal
+    checker(value, origin_type, args, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 213, in check_mapping
+    raise TypeCheckError("is not a dict")
+typeguard.TypeCheckError: the return value (str) is not a dict
+2025-08-24 15:48:38 - [ERROR] - [agent.tools.temp_tools] - Error retrieving temperatures for cities: [''] with operation: single
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/tools/temp_tools.py", line 49, in temp
+    return f"Temperature data unavailable. Default for {default_city.capitalize()}: {temp}"
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_functions.py", line 166, in check_return_type
+    check_type_internal(retval, annotation, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 960, in check_type_internal
+    checker(value, origin_type, args, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 213, in check_mapping
+    raise TypeCheckError("is not a dict")
+typeguard.TypeCheckError: the return value (str) is not a dict
+2025-08-24 15:49:08 - [ERROR] - [agent.tools.temp_tools] - Error retrieving temperatures for cities: [''] with operation: single
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/tools/temp_tools.py", line 51, in temp
+    return f"Temperature data unavailable. Default for {default_city.capitalize()}: {temp}"
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_functions.py", line 166, in check_return_type
+    check_type_internal(retval, annotation, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 960, in check_type_internal
+    checker(value, origin_type, args, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 213, in check_mapping
+    raise TypeCheckError("is not a dict")
+typeguard.TypeCheckError: the return value (str) is not a dict
+2025-08-24 15:49:29 - [ERROR] - [agent.tools.temp_tools] - Error retrieving temperatures for cities: [''] with operation: single
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/tools/temp_tools.py", line 50, in temp
+    return f"Temperature data unavailable. Default for {default_city.capitalize()}: {temp}"
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_functions.py", line 166, in check_return_type
+    check_type_internal(retval, annotation, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 960, in check_type_internal
+    checker(value, origin_type, args, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 213, in check_mapping
+    raise TypeCheckError("is not a dict")
+typeguard.TypeCheckError: the return value (str) is not a dict
+2025-08-24 15:50:04 - [ERROR] - [agent.tools.temp_tools] - Error retrieving temperatures for cities: [''] with operation: single
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/tools/temp_tools.py", line 50, in temp
+    return f"Temperature data unavailable. Default for {default_city.capitalize()}: {temp}"
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_functions.py", line 166, in check_return_type
+    check_type_internal(retval, annotation, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 960, in check_type_internal
+    checker(value, origin_type, args, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 213, in check_mapping
+    raise TypeCheckError("is not a dict")
+typeguard.TypeCheckError: the return value (str) is not a dict
+2025-08-24 15:50:32 - [ERROR] - [agent.tools.temp_tools] - Error retrieving temperatures for cities: [''] with operation: single
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/tools/temp_tools.py", line 50, in temp
+    return f"Temperature data unavailable. Default for {default_city.capitalize()}: {temp}"
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_functions.py", line 166, in check_return_type
+    check_type_internal(retval, annotation, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 960, in check_type_internal
+    checker(value, origin_type, args, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 213, in check_mapping
+    raise TypeCheckError("is not a dict")
+typeguard.TypeCheckError: the return value (str) is not a dict
+2025-08-24 15:50:53 - [ERROR] - [agent.handlers.temp_handler] - Error in handle_temp with args: {'cities': [''], 'operation': 'single'} and intermediate_values: {}
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/handlers/temp_handler.py", line 47, in handle_temp
+    intermediate_values["temperature"] = float(result.replace("°C", ""))
+ValueError: could not convert string to float: 'Temperature data unavailable. Default for Dhaka: 31'
+2025-08-24 15:50:53 - [ERROR] - [agent.agent] - ValueError: could not convert string to float: 'Temperature data unavailable. Default for Dhaka: 31'
+2025-08-24 15:51:12 - [ERROR] - [agent.handlers.temp_handler] - Error in handle_temp with args: {'cities': [''], 'operation': 'single'} and intermediate_values: {}
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/handlers/temp_handler.py", line 47, in handle_temp
+    intermediate_values["temperature"] = float(result.replace("°C", ""))
+ValueError: could not convert string to float: 'Temperature data unavailable. Default for Dhaka: 31'
+2025-08-24 15:51:12 - [ERROR] - [agent.agent] - ValueError: could not convert string to float: 'Temperature data unavailable. Default for Dhaka: 31'
+2025-08-24 15:51:42 - [ERROR] - [agent.handlers.temp_handler] - Error in handle_temp with args: {'cities': [''], 'operation': 'single'} and intermediate_values: {}
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/handlers/temp_handler.py", line 47, in handle_temp
+    intermediate_values["temperature"] = float(result.replace("°C", ""))
+ValueError: could not convert string to float: 'Temperature data unavailable. Default for Dhaka: 31 '
+2025-08-24 15:51:42 - [ERROR] - [agent.agent] - ValueError: could not convert string to float: 'Temperature data unavailable. Default for Dhaka: 31 '
+2025-08-24 15:51:46 - [ERROR] - [agent.handlers.temp_handler] - Error in handle_temp with args: {'cities': [''], 'operation': 'single'} and intermediate_values: {}
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/handlers/temp_handler.py", line 47, in handle_temp
+    intermediate_values["temperature"] = float(result.replace("°C", ""))
+ValueError: could not convert string to float: 'Temperature data unavailable. Default for Dhaka: 31'
+2025-08-24 15:51:46 - [ERROR] - [agent.agent] - ValueError: could not convert string to float: 'Temperature data unavailable. Default for Dhaka: 31'
+2025-08-24 15:52:25 - [ERROR] - [agent.handlers.temp_handler] - Error in handle_temp with args: {'cities': [''], 'operation': 'single'} and intermediate_values: {}
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/handlers/temp_handler.py", line 47, in handle_temp
+    intermediate_values["temperature"] = float(result.replace("°C", ""))
+ValueError: could not convert string to float: 'Temperature data unavailable. Default for Dhaka: 31'
+2025-08-24 15:52:25 - [ERROR] - [agent.agent] - ValueError: could not convert string to float: 'Temperature data unavailable. Default for Dhaka: 31'
+2025-08-24 16:54:30 - [ERROR] - [agent.tools.calc_tools] - Error evaluating expression: 8 / 0
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/tools/calc_tools.py", line 79, in evaluate
+    result: float = eval(e)
+  File "<string>", line 1, in <module>
+ZeroDivisionError: division by zero
+2025-08-24 16:55:13 - [ERROR] - [agent.tools.calc_tools] - Error evaluating expression: 8 / 0
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/tools/calc_tools.py", line 79, in evaluate
+    result: float = eval(e)
+  File "<string>", line 1, in <module>
+ZeroDivisionError: division by zero
+2025-08-24 16:55:24 - [ERROR] - [agent.tools.calc_tools] - Error evaluating expression: 8 / 0
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/tools/calc_tools.py", line 79, in evaluate
+    result: float = eval(e)
+  File "<string>", line 1, in <module>
+ZeroDivisionError: division by zero
+2025-08-24 16:55:24 - [ERROR] - [agent.handlers.calc_handler] - Error occurred in handle_calc with args: {'numbers': None, 'operation': None, 'expr': '8 / 0'}
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/tools/calc_tools.py", line 79, in evaluate
+    result: float = eval(e)
+  File "<string>", line 1, in <module>
+ZeroDivisionError: division by zero
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/handlers/calc_handler.py", line 131, in handle_calc
+    return _calc_with_last_result(expr, intermediate_values)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/handlers/calc_handler.py", line 90, in _calc_with_last_result
+    result = tools.evaluate(new_expr)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/tools/calc_tools.py", line 85, in evaluate
+    return None
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_functions.py", line 166, in check_return_type
+    check_type_internal(retval, annotation, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 960, in check_type_internal
+    checker(value, origin_type, args, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 640, in check_number
+    raise TypeCheckError("is neither float or int")
+typeguard.TypeCheckError: the return value (None) is neither float or int
+2025-08-24 16:55:24 - [ERROR] - [agent.agent] - TypeError: the return value (None) is neither float or int
+2025-08-24 16:58:25 - [ERROR] - [agent.tools.calc_tools] - Error evaluating expression: 8 / 0
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/tools/calc_tools.py", line 79, in evaluate
+    result: float = eval(e)
+  File "<string>", line 1, in <module>
+ZeroDivisionError: division by zero
+2025-08-24 16:58:25 - [ERROR] - [agent.handlers.calc_handler] - Error occurred in handle_calc with args: {'numbers': None, 'operation': None, 'expr': '8 / 0'}
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/tools/calc_tools.py", line 79, in evaluate
+    result: float = eval(e)
+  File "<string>", line 1, in <module>
+ZeroDivisionError: division by zero
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/handlers/calc_handler.py", line 131, in handle_calc
+    return _calc_with_last_result(expr, intermediate_values)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/handlers/calc_handler.py", line 90, in _calc_with_last_result
+    result: CalcResultType = tools.evaluate(new_expr)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/tools/calc_tools.py", line 85, in evaluate
+    return None
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_functions.py", line 166, in check_return_type
+    check_type_internal(retval, annotation, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 960, in check_type_internal
+    checker(value, origin_type, args, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 640, in check_number
+    raise TypeCheckError("is neither float or int")
+typeguard.TypeCheckError: the return value (None) is neither float or int
+2025-08-24 16:58:25 - [ERROR] - [agent.agent] - TypeError: the return value (None) is neither float or int
+2025-08-24 16:58:44 - [ERROR] - [agent.tools.calc_tools] - Error evaluating expression: 8 / 0
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/tools/calc_tools.py", line 79, in evaluate
+    result: float = eval(e)
+  File "<string>", line 1, in <module>
+ZeroDivisionError: division by zero
+2025-08-24 16:58:44 - [ERROR] - [agent.handlers.calc_handler] - Error occurred in handle_calc with args: {'numbers': None, 'operation': None, 'expr': '8 / 0'}
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/tools/calc_tools.py", line 79, in evaluate
+    result: float = eval(e)
+  File "<string>", line 1, in <module>
+ZeroDivisionError: division by zero
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/handlers/calc_handler.py", line 132, in handle_calc
+    return _calc_with_last_result(expr, intermediate_values)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/handlers/calc_handler.py", line 90, in _calc_with_last_result
+    result: CalcResultType = tools.evaluate(new_expr)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/tools/calc_tools.py", line 85, in evaluate
+    return None
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_functions.py", line 166, in check_return_type
+    check_type_internal(retval, annotation, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 960, in check_type_internal
+    checker(value, origin_type, args, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 640, in check_number
+    raise TypeCheckError("is neither float or int")
+typeguard.TypeCheckError: the return value (None) is neither float or int
+2025-08-24 16:58:44 - [ERROR] - [agent.agent] - TypeError: the return value (None) is neither float or int
+2025-08-24 16:58:54 - [ERROR] - [agent.tools.calc_tools] - Error evaluating expression: 8 / 0
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/tools/calc_tools.py", line 79, in evaluate
+    result: float = eval(e)
+  File "<string>", line 1, in <module>
+ZeroDivisionError: division by zero
+2025-08-24 16:58:54 - [ERROR] - [agent.handlers.calc_handler] - Error occurred in handle_calc with args: {'numbers': None, 'operation': None, 'expr': '8 / 0'}
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/tools/calc_tools.py", line 79, in evaluate
+    result: float = eval(e)
+  File "<string>", line 1, in <module>
+ZeroDivisionError: division by zero
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/handlers/calc_handler.py", line 132, in handle_calc
+    return _calc_with_last_result(expr, intermediate_values)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/handlers/calc_handler.py", line 90, in _calc_with_last_result
+    result: CalcResultType = tools.evaluate(new_expr)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/tools/calc_tools.py", line 85, in evaluate
+    return None
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_functions.py", line 166, in check_return_type
+    check_type_internal(retval, annotation, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 960, in check_type_internal
+    checker(value, origin_type, args, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 640, in check_number
+    raise TypeCheckError("is neither float or int")
+typeguard.TypeCheckError: the return value (None) is neither float or int
+2025-08-24 16:58:54 - [ERROR] - [agent.agent] - TypeError: the return value (None) is neither float or int
+2025-08-24 16:58:59 - [ERROR] - [agent.tools.calc_tools] - Error evaluating expression: 8 / 0
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/tools/calc_tools.py", line 79, in evaluate
+    result: float = eval(e)
+  File "<string>", line 1, in <module>
+ZeroDivisionError: division by zero
+2025-08-24 16:58:59 - [ERROR] - [agent.handlers.calc_handler] - Error occurred in handle_calc with args: {'numbers': None, 'operation': None, 'expr': '8 / 0'}
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/tools/calc_tools.py", line 79, in evaluate
+    result: float = eval(e)
+  File "<string>", line 1, in <module>
+ZeroDivisionError: division by zero
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/handlers/calc_handler.py", line 132, in handle_calc
+    return _calc_with_last_result(expr, intermediate_values)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/handlers/calc_handler.py", line 90, in _calc_with_last_result
+    result: CalcResultType = tools.evaluate(new_expr)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/tools/calc_tools.py", line 85, in evaluate
+    return None
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_functions.py", line 166, in check_return_type
+    check_type_internal(retval, annotation, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 960, in check_type_internal
+    checker(value, origin_type, args, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 640, in check_number
+    raise TypeCheckError("is neither float or int")
+typeguard.TypeCheckError: the return value (None) is neither float or int
+2025-08-24 16:58:59 - [ERROR] - [agent.agent] - TypeError: the return value (None) is neither float or int
+2025-08-24 16:59:16 - [ERROR] - [agent.tools.calc_tools] - Error evaluating expression: 8 / 0
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/tools/calc_tools.py", line 79, in evaluate
+    result: float = eval(e)
+  File "<string>", line 1, in <module>
+ZeroDivisionError: division by zero
+2025-08-24 16:59:16 - [ERROR] - [agent.handlers.calc_handler] - Error occurred in handle_calc with args: {'numbers': None, 'operation': None, 'expr': '8 / 0'}
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/tools/calc_tools.py", line 79, in evaluate
+    result: float = eval(e)
+  File "<string>", line 1, in <module>
+ZeroDivisionError: division by zero
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/handlers/calc_handler.py", line 132, in handle_calc
+    return _calc_with_last_result(expr, intermediate_values)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/handlers/calc_handler.py", line 90, in _calc_with_last_result
+    result: CalcResultType = tools.evaluate(new_expr)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/tools/calc_tools.py", line 85, in evaluate
+    return None
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_functions.py", line 166, in check_return_type
+    check_type_internal(retval, annotation, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 960, in check_type_internal
+    checker(value, origin_type, args, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 640, in check_number
+    raise TypeCheckError("is neither float or int")
+typeguard.TypeCheckError: the return value (None) is neither float or int
+2025-08-24 16:59:16 - [ERROR] - [agent.agent] - TypeError: the return value (None) is neither float or int
+2025-08-24 17:00:14 - [ERROR] - [agent.tools.calc_tools] - Error evaluating expression: 8 / 0
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/tools/calc_tools.py", line 79, in evaluate
+    result: float = eval(e)
+  File "<string>", line 1, in <module>
+ZeroDivisionError: division by zero
+2025-08-24 17:00:14 - [ERROR] - [agent.handlers.calc_handler] - Error occurred in handle_calc with args: {'numbers': None, 'operation': None, 'expr': '8 / 0'}
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/tools/calc_tools.py", line 79, in evaluate
+    result: float = eval(e)
+  File "<string>", line 1, in <module>
+ZeroDivisionError: division by zero
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/handlers/calc_handler.py", line 132, in handle_calc
+    return _calc_with_last_result(expr, intermediate_values)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/handlers/calc_handler.py", line 91, in _calc_with_last_result
+    result: CalcResultType = tools.evaluate(new_expr)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/tools/calc_tools.py", line 85, in evaluate
+    return None
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_functions.py", line 166, in check_return_type
+    check_type_internal(retval, annotation, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 960, in check_type_internal
+    checker(value, origin_type, args, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 640, in check_number
+    raise TypeCheckError("is neither float or int")
+typeguard.TypeCheckError: the return value (None) is neither float or int
+2025-08-24 17:00:14 - [ERROR] - [agent.agent] - TypeError: the return value (None) is neither float or int
+2025-08-24 17:01:39 - [ERROR] - [agent.tools.calc_tools] - Error evaluating expression: 8 / 0
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/tools/calc_tools.py", line 80, in evaluate
+    result: float = eval(e)
+  File "<string>", line 1, in <module>
+ZeroDivisionError: division by zero
+2025-08-24 17:01:57 - [ERROR] - [agent.tools.calc_tools] - Error evaluating expression: 8 / 0
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/tools/calc_tools.py", line 80, in evaluate
+    result: float = eval(e)
+  File "<string>", line 1, in <module>
+ZeroDivisionError: division by zero
+2025-08-24 17:02:41 - [ERROR] - [agent.tools.calc_tools] - Division by zero in expression: 8 / 0
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/tools/calc_tools.py", line 80, in evaluate
+    result: float = eval(e)
+  File "<string>", line 1, in <module>
+ZeroDivisionError: division by zero
+2025-08-24 17:02:41 - [ERROR] - [agent.handlers.calc_handler] - Error occurred in handle_calc with args: {'numbers': None, 'operation': None, 'expr': '8 / 0'}
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/handlers/calc_handler.py", line 131, in handle_calc
+    return _calc_with_last_result(expr, intermediate_values)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/handlers/calc_handler.py", line 90, in _calc_with_last_result
+    result: CalcResultType = tools.evaluate(new_expr)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/tools/calc_tools.py", line 80, in evaluate
+    result: float = eval(e)
+  File "<string>", line 1, in <module>
+ZeroDivisionError: division by zero
+2025-08-24 17:02:41 - [ERROR] - [agent.agent] - Error executing tool: calc with args: {'numbers': None, 'operation': None, 'expr': '8 / 0'}
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/agent.py", line 70, in answer
+    result = handler(args, intermediate_values)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/utils/latency_tracker.py", line 22, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/handlers/calc_handler.py", line 131, in handle_calc
+    return _calc_with_last_result(expr, intermediate_values)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/handlers/calc_handler.py", line 90, in _calc_with_last_result
+    result: CalcResultType = tools.evaluate(new_expr)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/tools/calc_tools.py", line 80, in evaluate
+    result: float = eval(e)
+  File "<string>", line 1, in <module>
+ZeroDivisionError: division by zero
+2025-08-24 17:03:11 - [ERROR] - [agent.tools.calc_tools] - Division by zero in expression: 8 / 0
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/tools/calc_tools.py", line 80, in evaluate
+    result: float = eval(e)
+  File "<string>", line 1, in <module>
+ZeroDivisionError: division by zero
+2025-08-24 17:03:11 - [ERROR] - [agent.handlers.calc_handler] - Error occurred in handle_calc with args: {'numbers': None, 'operation': None, 'expr': '8 / 0'}
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/handlers/calc_handler.py", line 131, in handle_calc
+    return _calc_with_last_result(expr, intermediate_values)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/handlers/calc_handler.py", line 90, in _calc_with_last_result
+    result: CalcResultType = tools.evaluate(new_expr)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/tools/calc_tools.py", line 80, in evaluate
+    result: float = eval(e)
+  File "<string>", line 1, in <module>
+ZeroDivisionError: division by zero
+2025-08-24 17:03:17 - [ERROR] - [agent.tools.calc_tools] - Division by zero in expression: 8 / 0
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/tools/calc_tools.py", line 80, in evaluate
+    result: float = eval(e)
+  File "<string>", line 1, in <module>
+ZeroDivisionError: division by zero
+2025-08-24 17:03:17 - [ERROR] - [agent.handlers.calc_handler] - Error occurred in handle_calc with args: {'numbers': None, 'operation': None, 'expr': '8 / 0'}
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/handlers/calc_handler.py", line 131, in handle_calc
+    return _calc_with_last_result(expr, intermediate_values)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/handlers/calc_handler.py", line 90, in _calc_with_last_result
+    result: CalcResultType = tools.evaluate(new_expr)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/tools/calc_tools.py", line 80, in evaluate
+    result: float = eval(e)
+  File "<string>", line 1, in <module>
+ZeroDivisionError: division by zero
+2025-08-24 17:03:17 - [ERROR] - [agent.agent] - ValueError: division by zero
+2025-08-24 17:03:28 - [ERROR] - [agent.tools.calc_tools] - Division by zero in expression: 8 / 0
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/tools/calc_tools.py", line 80, in evaluate
+    result: float = eval(e)
+  File "<string>", line 1, in <module>
+ZeroDivisionError: division by zero
+2025-08-24 17:03:28 - [ERROR] - [agent.handlers.calc_handler] - Error occurred in handle_calc with args: {'numbers': None, 'operation': None, 'expr': '8 / 0'}
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/handlers/calc_handler.py", line 131, in handle_calc
+    return _calc_with_last_result(expr, intermediate_values)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/handlers/calc_handler.py", line 90, in _calc_with_last_result
+    result: CalcResultType = tools.evaluate(new_expr)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/tools/calc_tools.py", line 80, in evaluate
+    result: float = eval(e)
+  File "<string>", line 1, in <module>
+ZeroDivisionError: division by zero
+2025-08-24 17:03:28 - [ERROR] - [agent.agent] - ValueError: division by zero
+2025-08-24 17:03:35 - [ERROR] - [agent.tools.calc_tools] - Division by zero in expression: 8 / 0
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/tools/calc_tools.py", line 80, in evaluate
+    result: float = eval(e)
+  File "<string>", line 1, in <module>
+ZeroDivisionError: division by zero
+2025-08-24 17:03:35 - [ERROR] - [agent.handlers.calc_handler] - Error occurred in handle_calc with args: {'numbers': None, 'operation': None, 'expr': '8 / 0'}
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/handlers/calc_handler.py", line 131, in handle_calc
+    return _calc_with_last_result(expr, intermediate_values)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/handlers/calc_handler.py", line 90, in _calc_with_last_result
+    result: CalcResultType = tools.evaluate(new_expr)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/tools/calc_tools.py", line 80, in evaluate
+    result: float = eval(e)
+  File "<string>", line 1, in <module>
+ZeroDivisionError: division by zero
+2025-08-24 17:03:35 - [ERROR] - [agent.agent] - ValueError: division by zero
+2025-08-24 17:04:23 - [ERROR] - [agent.tools.calc_tools] - Division by zero in expression: 8 / 0
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/tools/calc_tools.py", line 80, in evaluate
+    result: float = eval(e)
+  File "<string>", line 1, in <module>
+ZeroDivisionError: division by zero
+2025-08-24 17:04:23 - [ERROR] - [agent.handlers.calc_handler] - Error occurred in handle_calc with args: {'numbers': None, 'operation': None, 'expr': '8 / 0'}
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/handlers/calc_handler.py", line 131, in handle_calc
+    return _calc_with_last_result(expr, intermediate_values)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/handlers/calc_handler.py", line 90, in _calc_with_last_result
+    result: CalcResultType = tools.evaluate(new_expr)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/tools/calc_tools.py", line 80, in evaluate
+    result: float = eval(e)
+  File "<string>", line 1, in <module>
+ZeroDivisionError: division by zero
+2025-08-24 17:04:23 - [ERROR] - [agent.agent] - ValueError: division by zero
+2025-08-24 17:04:46 - [ERROR] - [agent.tools.calc_tools] - Division by zero in expression: 8 / 0
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/tools/calc_tools.py", line 80, in evaluate
+    result: float = eval(e)
+  File "<string>", line 1, in <module>
+ZeroDivisionError: division by zero
+2025-08-24 17:04:46 - [ERROR] - [agent.handlers.calc_handler] - Error occurred in handle_calc with args: {'numbers': None, 'operation': None, 'expr': '8 / 0'}
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/handlers/calc_handler.py", line 131, in handle_calc
+    return _calc_with_last_result(expr, intermediate_values)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/handlers/calc_handler.py", line 90, in _calc_with_last_result
+    result: CalcResultType = tools.evaluate(new_expr)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/tools/calc_tools.py", line 80, in evaluate
+    result: float = eval(e)
+  File "<string>", line 1, in <module>
+ZeroDivisionError: division by zero
+2025-08-24 17:04:46 - [ERROR] - [agent.agent] - ValueError: division by zero
+2025-08-24 17:07:44 - [ERROR] - [agent.tools.calc_tools] - Division by zero in expression: 0 / 0
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/tools/calc_tools.py", line 80, in evaluate
+    result: float = eval(e)
+  File "<string>", line 1, in <module>
+ZeroDivisionError: division by zero
+2025-08-24 17:07:44 - [ERROR] - [agent.handlers.calc_handler] - Error occurred in handle_calc with args: {'numbers': None, 'operation': None, 'expr': '0 / 0'}
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/handlers/calc_handler.py", line 131, in handle_calc
+    return _calc_with_last_result(expr, intermediate_values)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/handlers/calc_handler.py", line 90, in _calc_with_last_result
+    result: CalcResultType = tools.evaluate(new_expr)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/tools/calc_tools.py", line 80, in evaluate
+    result: float = eval(e)
+  File "<string>", line 1, in <module>
+ZeroDivisionError: division by zero
+2025-08-24 17:07:44 - [ERROR] - [agent.agent] - ValueError: division by zero
+2025-08-24 17:14:16 - [ERROR] - [agent.handlers.temp_handler] - Error in handle_temp with args: {'cities': ['dhaka'], 'operation': 'single'} and intermediate_values: {}
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/handlers/temp_handler.py", line 46, in handle_temp
+    temperature: float = list(result.values())[0]
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_functions.py", line 283, in check_variable_assignment
+    check_type_internal(val, annotation, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 960, in check_type_internal
+    checker(value, origin_type, args, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 640, in check_number
+    raise TypeCheckError("is neither float or int")
+typeguard.TypeCheckError: value assigned to temperature (str) is neither float or int
+2025-08-24 17:14:16 - [ERROR] - [agent.agent] - TypeError: value assigned to temperature (str) is neither float or int
+2025-08-24 17:14:42 - [ERROR] - [agent.handlers.temp_handler] - Error in handle_temp with args: {'cities': ['dhaka'], 'operation': 'single'} and intermediate_values: {}
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/handlers/temp_handler.py", line 46, in handle_temp
+    temperature: float = list(result.values())[0]
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_functions.py", line 283, in check_variable_assignment
+    check_type_internal(val, annotation, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 960, in check_type_internal
+    checker(value, origin_type, args, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 640, in check_number
+    raise TypeCheckError("is neither float or int")
+typeguard.TypeCheckError: value assigned to temperature (str) is neither float or int
+2025-08-24 17:14:42 - [ERROR] - [agent.agent] - TypeError: value assigned to temperature (str) is neither float or int
+2025-08-24 17:15:16 - [ERROR] - [agent.handlers.temp_handler] - Error in handle_temp with args: {'cities': ['dhaka'], 'operation': 'single'} and intermediate_values: {}
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/handlers/temp_handler.py", line 46, in handle_temp
+    temperature: float = list(result.values())[0]
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_functions.py", line 283, in check_variable_assignment
+    check_type_internal(val, annotation, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 960, in check_type_internal
+    checker(value, origin_type, args, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 640, in check_number
+    raise TypeCheckError("is neither float or int")
+typeguard.TypeCheckError: value assigned to temperature (str) is neither float or int
+2025-08-24 17:15:16 - [ERROR] - [agent.agent] - TypeError: value assigned to temperature (str) is neither float or int
+2025-08-24 17:15:54 - [ERROR] - [agent.handlers.temp_handler] - Error in handle_temp with args: {'cities': ['dhaka'], 'operation': 'single'} and intermediate_values: {}
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/handlers/temp_handler.py", line 46, in handle_temp
+    temperature: float = list(result.values())[0]
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_functions.py", line 283, in check_variable_assignment
+    check_type_internal(val, annotation, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 960, in check_type_internal
+    checker(value, origin_type, args, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 640, in check_number
+    raise TypeCheckError("is neither float or int")
+typeguard.TypeCheckError: value assigned to temperature (str) is neither float or int
+2025-08-24 17:15:54 - [ERROR] - [agent.agent] - TypeError: value assigned to temperature (str) is neither float or int
+2025-08-24 17:16:03 - [ERROR] - [agent.handlers.temp_handler] - Error in handle_temp with args: {'cities': ['dhaka'], 'operation': 'single'} and intermediate_values: {}
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/handlers/temp_handler.py", line 46, in handle_temp
+    temperature: float = list(result.values())[0]
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_functions.py", line 283, in check_variable_assignment
+    check_type_internal(val, annotation, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 960, in check_type_internal
+    checker(value, origin_type, args, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 640, in check_number
+    raise TypeCheckError("is neither float or int")
+typeguard.TypeCheckError: value assigned to temperature (str) is neither float or int
+2025-08-24 17:16:03 - [ERROR] - [agent.agent] - TypeError: value assigned to temperature (str) is neither float or int
+2025-08-24 17:16:21 - [ERROR] - [agent.handlers.temp_handler] - Error in handle_temp with args: {'cities': ['dhaka'], 'operation': 'single'} and intermediate_values: {}
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/handlers/temp_handler.py", line 46, in handle_temp
+    temperature: float = list(result.values())[0]
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_functions.py", line 283, in check_variable_assignment
+    check_type_internal(val, annotation, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 960, in check_type_internal
+    checker(value, origin_type, args, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 640, in check_number
+    raise TypeCheckError("is neither float or int")
+typeguard.TypeCheckError: value assigned to temperature (str) is neither float or int
+2025-08-24 17:16:21 - [ERROR] - [agent.agent] - TypeError: value assigned to temperature (str) is neither float or int
+2025-08-24 17:19:13 - [ERROR] - [agent.handlers.temp_handler] - Error in handle_temp with args: {'cities': [''], 'operation': 'single'} and intermediate_values: {}
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/handlers/temp_handler.py", line 58, in handle_temp
+    temperature = float(match.group())
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_functions.py", line 283, in check_variable_assignment
+    check_type_internal(val, annotation, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 965, in check_type_internal
+    raise TypeCheckError(f"is not an instance of {qualified_name(origin_type)}")
+typeguard.TypeCheckError: value assigned to temperature (float) is not an instance of str
+2025-08-24 17:19:13 - [ERROR] - [agent.agent] - TypeError: value assigned to temperature (float) is not an instance of str
+2025-08-24 17:19:34 - [ERROR] - [agent.handlers.temp_handler] - Error in handle_temp with args: {'cities': [''], 'operation': 'single'} and intermediate_values: {}
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/handlers/temp_handler.py", line 58, in handle_temp
+    temperature = float(match.group())
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_functions.py", line 283, in check_variable_assignment
+    check_type_internal(val, annotation, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 965, in check_type_internal
+    raise TypeCheckError(f"is not an instance of {qualified_name(origin_type)}")
+typeguard.TypeCheckError: value assigned to temperature (float) is not an instance of str
+2025-08-24 17:19:34 - [ERROR] - [agent.agent] - TypeError: value assigned to temperature (float) is not an instance of str
+2025-08-24 17:19:48 - [ERROR] - [agent.handlers.temp_handler] - Error in handle_temp with args: {'cities': [''], 'operation': 'single'} and intermediate_values: {}
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/handlers/temp_handler.py", line 58, in handle_temp
+    temperature = float(match.group())
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_functions.py", line 283, in check_variable_assignment
+    check_type_internal(val, annotation, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 965, in check_type_internal
+    raise TypeCheckError(f"is not an instance of {qualified_name(origin_type)}")
+typeguard.TypeCheckError: value assigned to temperature (float) is not an instance of str
+2025-08-24 17:19:48 - [ERROR] - [agent.agent] - TypeError: value assigned to temperature (float) is not an instance of str
+2025-08-24 17:19:59 - [ERROR] - [agent.handlers.temp_handler] - Error in handle_temp with args: {'cities': [''], 'operation': 'single'} and intermediate_values: {}
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/handlers/temp_handler.py", line 58, in handle_temp
+    temperature = float(match.group())
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_functions.py", line 283, in check_variable_assignment
+    check_type_internal(val, annotation, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 965, in check_type_internal
+    raise TypeCheckError(f"is not an instance of {qualified_name(origin_type)}")
+typeguard.TypeCheckError: value assigned to temperature (float) is not an instance of str
+2025-08-24 17:19:59 - [ERROR] - [agent.agent] - TypeError: value assigned to temperature (float) is not an instance of str
+2025-08-24 17:20:34 - [ERROR] - [agent.handlers.temp_handler] - Error in handle_temp with args: {'cities': [''], 'operation': 'single'} and intermediate_values: {}
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/handlers/temp_handler.py", line 58, in handle_temp
+    temperature = float(match.group())
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_functions.py", line 283, in check_variable_assignment
+    check_type_internal(val, annotation, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 965, in check_type_internal
+    raise TypeCheckError(f"is not an instance of {qualified_name(origin_type)}")
+typeguard.TypeCheckError: value assigned to temperature (float) is not an instance of str
+2025-08-24 17:20:34 - [ERROR] - [agent.agent] - TypeError: value assigned to temperature (float) is not an instance of str
+2025-08-24 17:20:55 - [ERROR] - [agent.handlers.temp_handler] - Error in handle_temp with args: {'cities': [''], 'operation': 'single'} and intermediate_values: {}
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/handlers/temp_handler.py", line 58, in handle_temp
+    temperature = float(match.group())
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_functions.py", line 283, in check_variable_assignment
+    check_type_internal(val, annotation, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 965, in check_type_internal
+    raise TypeCheckError(f"is not an instance of {qualified_name(origin_type)}")
+typeguard.TypeCheckError: value assigned to temperature (float) is not an instance of str
+2025-08-24 17:20:55 - [ERROR] - [agent.agent] - TypeError: value assigned to temperature (float) is not an instance of str
+2025-08-24 17:21:42 - [ERROR] - [agent.handlers.temp_handler] - Error in handle_temp with args: {'cities': [''], 'operation': 'single'} and intermediate_values: {}
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/handlers/temp_handler.py", line 58, in handle_temp
+    temperature = float(match.group())
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_functions.py", line 283, in check_variable_assignment
+    check_type_internal(val, annotation, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 965, in check_type_internal
+    raise TypeCheckError(f"is not an instance of {qualified_name(origin_type)}")
+typeguard.TypeCheckError: value assigned to temperature (float) is not an instance of str
+2025-08-24 17:21:42 - [ERROR] - [agent.agent] - TypeError: value assigned to temperature (float) is not an instance of str
+2025-08-24 17:22:00 - [ERROR] - [agent.handlers.temp_handler] - Error in handle_temp with args: {'cities': [''], 'operation': 'single'} and intermediate_values: {}
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/handlers/temp_handler.py", line 58, in handle_temp
+    temperature = float(match.group())
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_functions.py", line 283, in check_variable_assignment
+    check_type_internal(val, annotation, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 965, in check_type_internal
+    raise TypeCheckError(f"is not an instance of {qualified_name(origin_type)}")
+typeguard.TypeCheckError: value assigned to temperature (float) is not an instance of str
+2025-08-24 17:22:00 - [ERROR] - [agent.agent] - TypeError: value assigned to temperature (float) is not an instance of str
+2025-08-24 17:22:14 - [ERROR] - [agent.handlers.temp_handler] - Error in handle_temp with args: {'cities': [''], 'operation': 'single'} and intermediate_values: {}
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/handlers/temp_handler.py", line 57, in handle_temp
+    temperature = float(match.group())
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_functions.py", line 283, in check_variable_assignment
+    check_type_internal(val, annotation, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 965, in check_type_internal
+    raise TypeCheckError(f"is not an instance of {qualified_name(origin_type)}")
+typeguard.TypeCheckError: value assigned to temperature (float) is not an instance of str
+2025-08-24 17:22:14 - [ERROR] - [agent.agent] - TypeError: value assigned to temperature (float) is not an instance of str
+2025-08-24 17:22:22 - [ERROR] - [agent.handlers.temp_handler] - Error in handle_temp with args: {'cities': [''], 'operation': 'single'} and intermediate_values: {}
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/handlers/temp_handler.py", line 57, in handle_temp
+    temperature = float(match.group())
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_functions.py", line 283, in check_variable_assignment
+    check_type_internal(val, annotation, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 965, in check_type_internal
+    raise TypeCheckError(f"is not an instance of {qualified_name(origin_type)}")
+typeguard.TypeCheckError: value assigned to temperature (float) is not an instance of str
+2025-08-24 17:22:22 - [ERROR] - [agent.agent] - TypeError: value assigned to temperature (float) is not an instance of str
+2025-08-24 17:23:12 - [ERROR] - [agent.handlers.temp_handler] - Error in handle_temp with args: {'cities': [''], 'operation': 'single'} and intermediate_values: {}
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/handlers/temp_handler.py", line 58, in handle_temp
+    temperature = float(match.group())
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_functions.py", line 283, in check_variable_assignment
+    check_type_internal(val, annotation, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 965, in check_type_internal
+    raise TypeCheckError(f"is not an instance of {qualified_name(origin_type)}")
+typeguard.TypeCheckError: value assigned to temperature (float) is not an instance of str
+2025-08-24 17:23:12 - [ERROR] - [agent.agent] - TypeError: value assigned to temperature (float) is not an instance of str
+2025-08-24 18:01:34 - [ERROR] - [agent.handlers.calc_handler] - Error occurred in handle_calc with args: {'numbers': None, 'operation': None, 'expr': '+ 10'}
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/handlers/calc_handler.py", line 124, in handle_calc
+    temp_val_dict: Dict[str, float] = intermediate_values.get("temperature", {})
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_functions.py", line 283, in check_variable_assignment
+    check_type_internal(val, annotation, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 960, in check_type_internal
+    checker(value, origin_type, args, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 213, in check_mapping
+    raise TypeCheckError("is not a dict")
+typeguard.TypeCheckError: value assigned to temp_val_dict (str) is not a dict
+2025-08-24 18:01:34 - [ERROR] - [agent.agent] - TypeError: value assigned to temp_val_dict (str) is not a dict
+2025-08-24 18:01:53 - [ERROR] - [agent.handlers.calc_handler] - Error occurred in handle_calc with args: {'numbers': None, 'operation': None, 'expr': '+ 10'}
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/handlers/calc_handler.py", line 124, in handle_calc
+    temp_val_dict: Dict[str, float] = intermediate_values.get("temperature", {})
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_functions.py", line 283, in check_variable_assignment
+    check_type_internal(val, annotation, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 960, in check_type_internal
+    checker(value, origin_type, args, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 213, in check_mapping
+    raise TypeCheckError("is not a dict")
+typeguard.TypeCheckError: value assigned to temp_val_dict (float) is not a dict
+2025-08-24 18:01:53 - [ERROR] - [agent.agent] - TypeError: value assigned to temp_val_dict (float) is not a dict
+2025-08-24 18:01:55 - [ERROR] - [agent.handlers.calc_handler] - Error occurred in handle_calc with args: {'numbers': None, 'operation': None, 'expr': '+ 10'}
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/handlers/calc_handler.py", line 124, in handle_calc
+    temp_val_dict: Dict[str, float] = intermediate_values.get("temperature", {})
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_functions.py", line 283, in check_variable_assignment
+    check_type_internal(val, annotation, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 960, in check_type_internal
+    checker(value, origin_type, args, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 213, in check_mapping
+    raise TypeCheckError("is not a dict")
+typeguard.TypeCheckError: value assigned to temp_val_dict (float) is not a dict
+2025-08-24 18:01:55 - [ERROR] - [agent.agent] - TypeError: value assigned to temp_val_dict (float) is not a dict
+2025-08-24 20:00:44 - [ERROR] - [agent.handlers.calc_handler] - Error occurred in handle_calc with args: {'numbers': None, 'operation': None, 'expr': '+ 10'}
+Traceback (most recent call last):
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/agent/handlers/calc_handler.py", line 124, in handle_calc
+    temp_val_dict: Dict[str, float] = intermediate_values.get("temperature", {})
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_functions.py", line 283, in check_variable_assignment
+    check_type_internal(val, annotation, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 960, in check_type_internal
+    checker(value, origin_type, args, memo)
+  File "/home/nahian/optimizely_assignment/se1-agent-debug-assignment/se1-agent-debug-assignment/.venv/lib/python3.10/site-packages/typeguard/_checkers.py", line 213, in check_mapping
+    raise TypeCheckError("is not a dict")
+typeguard.TypeCheckError: value assigned to temp_val_dict (float) is not a dict
+2025-08-24 20:00:44 - [ERROR] - [agent.agent] - TypeError: value assigned to temp_val_dict (float) is not a dict

@@ -1,0 +1,7 @@
+2025-08-22 18:02:13 | INFO     | my_app | Info message (goes to info.log)
+2025-08-22 18:02:13 | WARNING  | my_app | Warning message (goes to info.log)
+2025-08-22 18:07:15 - INFO     - my_app - Info message (goes to info.log)
+2025-08-22 18:07:15 - WARNING  - my_app - Warning message (goes to info.log)
+2025-08-22 18:07:36 - [INFO    ] - [my_app] - Info message (goes to info.log)
+2025-08-22 18:07:36 - [WARNING ] - [my_app] - Warning message (goes to info.log)
+2025-08-22 18:08:41 - [INFO    ] - [agent.agent] - plan [{'tool': 'temperature', 'args': {'cities': ['london', 'paris'], 'operation': 'average'}}, {'tool': 'calc', 'args': {'expr': '+ 10'}}]

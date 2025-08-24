@@ -1,0 +1,2 @@
+2025-08-24 11:42:05 - [INFO] - [agent.handlers.weather_handler] - handle_weather called with args: {'cities': ['dhaka']}
+2025-08-24 11:42:05 - [INFO] - [agent.handlers.weather_handler] - handle_weather result for cities ['dhaka']: Hot and humid.
